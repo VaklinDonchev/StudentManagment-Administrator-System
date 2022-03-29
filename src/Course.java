@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Course {
 String name;
 int cost=600;
-ArrayList<Student> enrolledStudents;
+ArrayList<Student> enrolledStudents = new ArrayList<Student>();
 public String getName() {
 	return name;
 }
@@ -22,5 +22,9 @@ public void setEnrolledStudents(ArrayList<Student> enrolledStudents) {
 }
 public void addStudentToCourse(Student s) {
 	enrolledStudents.add(s);
+}
+@Override
+public String toString() {
+	return "Course:" + name + " cost:" + cost;
 }
 }

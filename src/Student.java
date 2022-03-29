@@ -4,7 +4,7 @@ public class Student {
 	int uid;
 	String name;
 	String password;
-	ArrayList<Course> enrolledCourses;
+	ArrayList<Course> enrolledCourses =new ArrayList<Course>();
 	int balance;
 	int year;
 	
@@ -43,13 +43,16 @@ public class Student {
 		return balance;
 	}
 	public void setBalance(int balance) {
-		this.balance = balance;
+		this.balance += balance;
 	}
 	public int getYear() {
 		return year;
 	}
 	public void setYear(int year) {
 		this.year = year;
+	}
+	public void addCourseToStudent(Course c) {
+		enrolledCourses.add(c);
 	}
 	@Override
 	public String toString() {
