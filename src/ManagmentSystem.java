@@ -7,7 +7,7 @@ ArrayList<Course> courses;
 
 Scanner scanner = new Scanner(System.in);
 
-ManagmentSystem(){
+ManagmentSystem(){ 
 	login();
 }
 private void login() {
